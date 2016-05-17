@@ -1,0 +1,376 @@
+@keyframes nav-turn {
+  0%{
+    transform: rotateY(0deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 50%{
+    transform: rotateY(90deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 60%{
+    transform: rotateY(72deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 100%{
+    transform: rotateY(0deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@-webkit-keyframes nav-turn {
+  0%{
+    transform: rotateY(0deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+ 50%{
+    transform: rotateY(90deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 60%{
+    transform: rotateY(72deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 100%{
+    transform: rotateY(0deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@keyframes nav-turn-off {
+  0%{
+    transform: rotateY(0deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 50%{
+    transform: rotateY(90deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 60%{
+    transform: rotateY(72deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 100%{
+    transform: rotateY(0deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@-webkit-keyframes nav-turn-off {
+  0%{
+    transform: rotateY(0deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 50%{
+    transform: rotateY(90deg);
+    background: url('../images/yeoman.png');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 60%{
+    transform: rotateY(72deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 100%{
+    transform: rotateY(0deg);
+    background: url('../images/logo.jpg');
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@keyframes nav-show {
+  form {opacity: 0}
+  to {opacity: 1}
+}
+
+@-webkit-keyframes nav-show {
+  form {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes nav-hide {
+  form {opacity: 1}
+  to {opacity: 0}
+}
+
+@-webkit-keyframes nav-hide {
+  form {opacity: 1}
+  to {opacity: 0}
+}
+
+.navbar * {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.navbar {
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: #222;
+}
+
+.navbar .navbar-container {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-container .navbar-header {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.navbar-header .navbar-brand {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-brand .brand-icon,
+.navbar-brand span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navbar-brand span {
+  height: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 80px;
+}
+
+.navbar-brand .brand-icon {
+  background: url('../images/logo.jpg');
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  top: -15px;
+  left: 0px;
+  cursor: pointer;
+}
+
+.navbar-brand .brand-icon.hover {
+  animation: nav-turn 1s linear 0s 1 normal running forwards;
+  -webkit-animation: nav-turn 1s linear 0s 1 normal running forwards;
+}
+
+.navbar-brand .brand-icon.none-hover {
+  animation: nav-turn-off 1s linear 0s 1 normal running forwards;
+  -webkit-animation: nav-turn-off 1s linear 0s 1 normal running forwards;
+}
+
+.navbar-header .navbar-toggle {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    vertical-align: top;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.navbar-toggle ul {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #fafafa;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.navbar-toggle li {
+  border: 1px solid #fafafa;
+  margin-top: 2px;
+}
+
+.navbar-header .navbar-decription:before {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  top: -10px;
+  left: 33px;
+  border-top: 5px solid rgba(34,34,34,0);
+  border-right: 5px solid rgba(34,34,34,0);
+  border-bottom: 5px solid rgba(34,34,34,1);
+  border-left: 5px solid rgba(34,34,34,0);
+}
+
+.navbar-header .navbar-decription {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  display: block;
+  opacity: 0;
+  background: #222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  word-break: keep-all;
+}
+
+.navbar-header .navbar-decription.hover {
+  animation: nav-show 1s linear 0s 1 normal running forwards;
+  -webkit-animation: nav-show 1s linear 0s 1 normal running forwards;
+}
+
+.navbar-header .navbar-decription.none-hover {
+  animation: nav-hide 1s linear 0s 1 normal running forwards;
+  -webkit-animation: nav-hide 1s linear 0s 1 normal running forwards;
+}
+
+.navbar-container .navbar-collapse {
+  display: none;
+  width: 100%;
+}
+
+.navbar-container .navbar-collapse.in {
+  display: block;
+}
+
+.navbar-collapse .navbar-nav {
+  display: block;
+  background: #222;
+  padding-top: 15px;
+}
+
+.navbar-nav li {
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  vertical-align: top;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-nav li:hover {
+  background: #f0ad4e;
+  color: #222;
+}
+
+.navbar-nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-nav li:hover a {
+  color: #222;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 1470px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-container .navbar-header {
+    width: auto;
+    display: inline-block;
+    float: left;
+  }
+  .navbar-header .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-collapse .navbar-nav {
+    height: 50px;
+    display: inline-block;
+    float: right;
+    padding-top: 0;
+  }
+
+  .navbar-nav li {
+    display: inline-block;
+  }
+
+  .navbar-container .navbar-collapse {
+    display: block;
+    height: 50px;
+  }
+}
