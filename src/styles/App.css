@@ -4,6 +4,10 @@ body {
   background: #1AB5FF;
 }
 
+.app {
+  height: 100%;
+}
+
 .index img {
   margin: 40px auto;
   border-radius: 4px;

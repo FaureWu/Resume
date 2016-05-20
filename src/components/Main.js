@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar title="Resume" decription="web front-end development engineer" items={Config.items}></Navbar>
+        <Navbar title="Resume" decription="Faure Wu" items={Config.items}></Navbar>
         {this.props.children}
       </div>
     );

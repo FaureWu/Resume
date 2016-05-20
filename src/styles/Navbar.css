@@ -1,6 +1,7 @@
 @keyframes nav-turn {
   0%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -8,6 +9,7 @@
   }
  50%{
     transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -15,6 +17,7 @@
   }
  60%{
     transform: rotateY(72deg);
+    -webkit-transform: rotateY(72deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -22,6 +25,7 @@
   }
  100%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -32,6 +36,7 @@
 @-webkit-keyframes nav-turn {
   0%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -40,6 +45,7 @@
 
  50%{
     transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -47,6 +53,7 @@
   }
  60%{
     transform: rotateY(72deg);
+    -webkit-transform: rotateY(72deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -54,6 +61,7 @@
   }
  100%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -64,6 +72,7 @@
 @keyframes nav-turn-off {
   0%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -71,6 +80,7 @@
   }
  50%{
     transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -78,6 +88,7 @@
   }
  60%{
     transform: rotateY(72deg);
+    -webkit-transform: rotateY(72deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -85,6 +96,7 @@
   }
  100%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -95,6 +107,7 @@
 @-webkit-keyframes nav-turn-off {
   0%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -102,6 +115,7 @@
   }
  50%{
     transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
     background: url('../images/yeoman.png');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -109,6 +123,7 @@
   }
  60%{
     transform: rotateY(72deg);
+    -webkit-transform: rotateY(72deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -116,6 +131,7 @@
   }
  100%{
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
     background: url('../images/logo.jpg');
     background-size: 80px 80px;
     background-repeat: no-repeat;
@@ -123,38 +139,16 @@
   }
 }
 
-@keyframes nav-show {
-  form {opacity: 0}
-  to {opacity: 1}
-}
-
-@-webkit-keyframes nav-show {
-  form {opacity: 0}
-  to {opacity: 1}
-}
-
-@keyframes nav-hide {
-  form {opacity: 1}
-  to {opacity: 0}
-}
-
-@-webkit-keyframes nav-hide {
-  form {opacity: 1}
-  to {opacity: 0}
-}
-
 .navbar * {
   display: block;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: none;
 }
 
 .navbar {
+  position: relative;
+  z-index: 9999;
   height: 50px;
   margin-top: 15px;
-  margin-bottom: 15px;
   background: #222;
 }
 
@@ -177,6 +171,10 @@
   height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.navbar-brand a {
+  display: inline-block;
 }
 
 .navbar-brand .brand-icon,
@@ -207,6 +205,8 @@
   top: -15px;
   left: 0px;
   cursor: pointer;
+  z-index: 999;
+  border: 2px solid #222;
 }
 
 .navbar-brand .brand-icon.hover {
@@ -271,16 +271,19 @@
   border-radius: 10px;
   -webkit-border-radius: 10px;
   word-break: keep-all;
+  z-index: 999;
 }
 
 .navbar-header .navbar-decription.hover {
-  animation: nav-show 1s linear 0s 1 normal running forwards;
-  -webkit-animation: nav-show 1s linear 0s 1 normal running forwards;
+  opacity: 1;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 
 .navbar-header .navbar-decription.none-hover {
-  animation: nav-hide 1s linear 0s 1 normal running forwards;
-  -webkit-animation: nav-hide 1s linear 0s 1 normal running forwards;
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 
 .navbar-container .navbar-collapse {
@@ -296,14 +299,12 @@
   display: block;
   background: #222;
   padding-top: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-nav li {
   height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
   display: block;
   vertical-align: top;
   font-size: 20px;
@@ -316,6 +317,10 @@
 }
 
 .navbar-nav li a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-decoration: none;
   color: #fff;
 }
@@ -325,25 +330,25 @@
 }
 
 @media (min-width: 1500px) {
-  .container {
+  .navbar-container {
     width: 1470px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
-  .container {
+  .navbar-container {
     width: 1170px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  .container {
+  .navbar-container {
     width: 970px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .container {
+  .navbar-container {
     width: 750px;
   }
 }
@@ -372,5 +377,30 @@
   .navbar-container .navbar-collapse {
     display: block;
     height: 50px;
+  }
+
+  .navbar-nav li a {
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+  }
+
+  .navbar-nav li a.active:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 1px 5px 1px #222;
+    -webkit-box-shadow: 2px 1px 5px 1px #222;
+  }
+
+  .navbar-nav li a.active {
+    color: #222;
   }
 }

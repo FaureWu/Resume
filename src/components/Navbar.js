@@ -9,41 +9,23 @@ class Navbar extends React.Component {
     super(props);
     this.state = {
       isHover: undefined,
-      showDecription: false,
       show: false
     };
   }
   hover() {
-    this.setState(
-      {
-        isHover: true,
-        showDecription: true
-      }
-    );
+    this.setState({
+        isHover: true
+    });
   }
   noneHover() {
-    this.setState(
-      {
-        isHover: false,
-        showDecription: false
-      }
-    );
+    this.setState({
+        isHover: false
+    });
   }
   toggleClick() {
-    this.setState(
-      {
+    this.setState({
         show: !this.state.show
-      }
-    );
-  }
-  itemClick() {
-    if(!this.state.show) return;
-
-    this.setState(
-      {
-        show: false
-      }
-    );
+    });
   }
   render() {
     let self = this;
@@ -67,10 +49,10 @@ class Navbar extends React.Component {
     });
     return (
       <div className="navbar">
-        <div className="navbar-container container">
+        <div className="navbar-container">
           <div className="navbar-header">
             <div className="navbar-brand">
-              <Link to="/"><div className={iconClass} onMouseEnter={this.hover.bind(this)} onMouseLeave={this.noneHover.bind(this)}></div></Link>
+              <div className={iconClass} onMouseEnter={this.hover.bind(this)} onMouseLeave={this.noneHover.bind(this)}></div>
               <span className="brand-title">{this.props.title}</span>
             </div>
             <div className={toggleClass} onClick={this.toggleClick.bind(this)}>
@@ -82,16 +64,14 @@ class Navbar extends React.Component {
               </ul>
             </div>
             <div className={decritionClass}>
-              <span>{this.state.showDecription ? this.props.decription : ''}</span>
+              <span>{this.props.decription}</span>
             </div>
           </div>
           <div className={collapseClass}>
             <ul className="navbar-nav">
               {
                 this.props.items.map(function(item, index) {
-                  return (
-                    <li key={index} onClick={self.itemClick.bind(self)}><Link to={item.path}>{item.name}</Link></li>
-                  );
+                  return (<li key={index}><Link activeClassName="active" to={item.path}>{item.name}</Link></li>);
                 })
               }
             </ul>

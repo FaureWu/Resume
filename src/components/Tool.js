@@ -16,25 +16,45 @@ let Tool = new class {
 
     return /msie/i.test(ua) && !window.opera;
   }
-  getVendorPrefix() {
-    var body = document.body || document.documentElement;
-    var style = body.style;
+  getBrowserVendor() {
+    let ua = navigator.userAgent.toLowerCase();
 
-    var transition = 'transition';
-    var vendor = ['Moz', 'webkit', 'ms', 'O', 'Khtml'];
+    const ie = /msie [\d.]+/gi;
+    const firefox = /firefox\/[\d.]+/gi;
+    const chrome = /chrome\/[\d.]+/gi;
+    const safari = /safari\/[\d.]+/gi;
 
-    transition = transition.charAt(0) + transition.substr(1);
+    let browser = {};
 
-    let i = 0;
-    while(i < vendor.length) {
-      if(typeof style[vendor[i] + transition] === 'string') {
-        return vendor[i];
-      }
-
-      i++;
+    if(ua.indexOf('msie') > 0) {
+      browser.vendor = 'ie';
+      browser.version = (ua.match(ie)+'').replace(/[^0-9.]/ig, '').split('.');
+      browser.version = browser.version[0];
+    } else if(ua.indexOf('firefox') > 0) {
+      browser.vendor = 'firefox';
+      browser.version = (ua.match(firefox)+'').replace(/[^0-9.]/ig, '');
+    } else if(ua.indexOf('chrome') > 0) {
+      browser.vendor = 'chrome';
+      browser.version = (ua.match(chrome)+'').replace(/[^0-9.]/ig, '');
+    } else if(ua.indexOf('safari') > 0) {
+      browser.vendor = 'safari';
+      browser.version = (ua.match(safari)+'').replace(/[^0-9.]/ig, '');
+    } else {
+      browser = undefined;
     }
 
-    return undefined;
+    return browser;
+  }
+  isIE6789() {
+    let browser = this.getBrowserVendor();
+    if(browser && browser.vendor == 'ie') {
+      if(browser.version == '6' || browser.version == '7'
+          || browser.version == '8' || browser.version == '9') {
+        return true;
+      }
+    }
+
+    return false;
   }
 }
 

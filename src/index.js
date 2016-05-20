@@ -24,6 +24,3 @@ ReactDOM.render(
   ),
   document.getElementById('app')
 );
-
-// Render the main component into the dom
-// ReactDOM.render(<App />, document.getElementById('app'));

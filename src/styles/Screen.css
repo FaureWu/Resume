@@ -1,0 +1,76 @@
+.screen * {
+  display: block;
+  box-sizing: border-box;
+}
+
+.screen {
+  height: 100%;
+  background: #1AB5FF;
+  color: #000;
+}
+
+.screen.screen-blue {
+  background: #337ab7;
+  color: #fff;
+}
+
+.screen.screen-yellow {
+  background: #f0ad4e;
+  color: #000;
+}
+
+.screen.screen-green {
+  background: #5cb85c;
+  color: #fff;
+}
+
+.screen.screen-pink {
+  background: #ff7a8a;
+  color: #fff;
+}
+
+.screen.screen-red {
+  background: #d9534f;
+  color: #fff;
+}
+
+.screen.screen-white {
+  background: #fff;
+  color: #000;
+}
+
+.screen .screen-container {
+  height: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1500px) {
+  .screen .screen-container {
+    width: 1470px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .screen .screen-container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .screen .screen-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .screen .screen-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 768px) {
+
+}
