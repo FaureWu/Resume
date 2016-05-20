@@ -14,17 +14,22 @@ class Navbar extends React.Component {
   }
   hover() {
     this.setState({
-        isHover: true
+      isHover: true
     });
   }
   noneHover() {
     this.setState({
-        isHover: false
+      isHover: false
     });
   }
   toggleClick() {
     this.setState({
-        show: !this.state.show
+      show: !this.state.show
+    });
+  }
+  itemClick() {
+    this.setState({
+      show: false
     });
   }
   render() {
@@ -71,7 +76,7 @@ class Navbar extends React.Component {
             <ul className="navbar-nav">
               {
                 this.props.items.map(function(item, index) {
-                  return (<li key={index}><Link activeClassName="active" to={item.path}>{item.name}</Link></li>);
+                  return (<li key={index} onClick={self.itemClick.bind(self)}><Link activeClassName="active" to={item.path}>{item.name}</Link></li>);
                 })
               }
             </ul>
