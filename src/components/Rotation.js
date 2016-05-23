@@ -12,7 +12,7 @@ class Rotation extends React.Component {
     };
 
     this.itemNum = props.items.length;
-    this.height = window.screen.height;
+    this.height = document.body.clientHeight;
     this.timer = undefined;
 
     this.dragObj = {

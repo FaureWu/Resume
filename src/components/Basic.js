@@ -37,9 +37,6 @@ class Basic extends React.Component {
               <span>502556093@qq.com</span>
             </div>
           </div>
-          <div className="basic-decript">
-            <p></p>
-          </div>
         </div>
       </div>
     );

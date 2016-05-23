@@ -2,6 +2,8 @@
 body {
   color: #fff;
   background: #1AB5FF;
+  font-size: 62.5%;
+  font-family: "Microsoft YaHei",Microsoft JhengHei, Helvetica, STHeiti STXihei, Arial;
 }
 
 .app {
