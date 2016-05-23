@@ -220,12 +220,12 @@
 }
 
 .navbar-header .navbar-toggle {
-    display: inline-block;
-    float: right;
-    cursor: pointer;
-    vertical-align: top;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  vertical-align: top;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .navbar-toggle ul {

@@ -1,31 +1,90 @@
+.basic * {
+  box-sizing: border-box;
+}
+
 .basic {
+  position: relative;
   height: 100%;
   padding: 20px;
 }
 
-.basic h1 {
-  margin: 0;
-  font-family: inherit;
-  font-size: 36px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: normal;
+.basic .basic-content {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  height: 100%;
 }
 
-.basic p {
-  margin: 0;
-  font-family: inherit;
+.basic-content .basic-icon {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.basic-icon span {
+  width: 150px;
+  height: 150px;
+  background: url('../images/logo.jpg');
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+}
+
+.basic-content .basic-info {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   font-size: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.basic .basic-icon {
-  width: 150px;
-  height: 150px;
+.basic-info p {
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
-.basic-icon a {
-  width: 100%;
-  height: 100%;
+.basic-info .basic-item label,
+.basic-info .basic-item span {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.basic-content .basic-decript {
+  position: relative;
+  display: block;
+}
+
+@media (min-width: 1500px) {
+  .basic .basic-content {
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .basic .basic-content {
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .basic .basic-content {
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .basic .basic-content {
+  }
+}
+
+@media (min-width: 768px) {
+
 }
