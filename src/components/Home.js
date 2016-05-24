@@ -1,5 +1,6 @@
 import React from 'react';
 import Rotation from './Rotation';
+import Config from '../config/config';
 
 class Home extends React.Component {
   constructor(props) {
@@ -8,50 +9,7 @@ class Home extends React.Component {
     };
   }
   render() {
-    let items =[
-      {
-        skin: '',
-        component: {
-          type: 'basic'
-        }
-      },
-      {
-        skin: 'blue',
-        component: {
-          type: ''
-        }
-      },
-      {
-        skin: 'yellow',
-        component: {
-          type: ''
-        }
-      },
-      {
-        skin: 'green',
-        component: {
-          type: ''
-        }
-      },
-      {
-        skin: 'pink',
-        component: {
-          type: ''
-        }
-      },
-      {
-        skin: 'red',
-        component: {
-          type: ''
-        }
-      },
-      {
-        skin: 'white',
-        component: {
-          type: ''
-        }
-      }
-    ];
+    let items = Config.data.home;
     return (
       <Rotation items={items}></Rotation>
     );

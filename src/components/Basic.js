@@ -11,6 +11,14 @@ class Basic extends React.Component {
   }
   render() {
     let self = this;
+    let data = this.props.data;
+    let items = [
+      {title: '出生日期：', value: data.birthday},
+      {title: '籍贯：', value: data.birthplace},
+      {title: '工作地点：', value: data.workplace},
+      {title: '电话：', value: data.tel},
+      {title: '邮箱：', value: data.email}
+    ];
     return (
       <div className="basic">
         <div className="basic-content">
@@ -18,24 +26,18 @@ class Basic extends React.Component {
             <span></span>
           </div>
           <div className="basic-info">
-            <p>吴贵福</p>
-            <p>web前端工程师</p>
-            <div className="basic-item">
-              <label>出生日期：</label>
-              <span>1991年05月30号</span>
-            </div>
-            <div className="basic-item">
-              <label>籍贯：</label>
-              <span>福建省南安市</span>
-            </div>
-            <div className="basic-item">
-              <label>电话：</label>
-              <span>xxx-xxxx-xxxx</span>
-            </div>
-            <div className="basic-item">
-              <label>邮箱：</label>
-              <span>502556093@qq.com</span>
-            </div>
+            <p>{data.name}</p>
+            <p>{data.job}</p>
+            {
+              items.map(function(item, index) {
+                return (
+                  <div key={index} className="basic-item">
+                    <label>{item.title}</label>
+                    <span>{item.value}</span>
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
       </div>

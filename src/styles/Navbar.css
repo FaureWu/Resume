@@ -401,6 +401,7 @@
   }
 
   .navbar-nav li a.active {
+    cursor: default;
     color: #222;
   }
 }

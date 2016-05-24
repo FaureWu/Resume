@@ -180,7 +180,11 @@ class Rotation extends React.Component {
           <div className="rotation-group">
           {
             items.map(function(screen, index) {
-              return (<Screen key={index} skin={screen.skin} height={self.height} component={screen.component}></Screen>);
+              let active = false;
+              if(index == self.state.currIndex) {
+                active = true;
+              }
+              return (<Screen key={index} skin={screen.skin} height={self.height} component={screen.component} active={active}></Screen>);
             })
           }
           </div>

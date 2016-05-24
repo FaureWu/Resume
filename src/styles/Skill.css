@@ -1,0 +1,169 @@
+.skill {
+  position: relative;
+  height: 100%;
+  padding: 10px;
+}
+
+.skill .skill-content {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  height: 100%;
+}
+
+.skill-content .skill-title {
+  height: 20px;
+  margin: 0;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+}
+
+.skill-content .skill-group {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.skill-group .skill-item {
+  width: 100%;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.skill-item div {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 0%;
+}
+
+/*了解*/
+.skill-item.understand div {
+  border-left: 5px solid #989493;
+  background: #EBEBEB;
+}
+
+/*掌握*/
+.skill-item.grasp div {
+  border-left: 5px solid #FF7256;
+  background: #FFAEB9;
+}
+
+/*熟悉*/
+.skill-item.familiar div {
+  border-left: 5px solid #FFA500;
+  background: #FFEC8B;
+}
+
+/*精通*/
+.skill-item.master div {
+  border-left: 5px solid #3498DB;
+  background: #83C2EA;
+}
+
+.skill-item div label {
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+}
+
+.skill-item.understand div label {
+  color: #989493;
+}
+
+.skill-item.grasp div label {
+  color: #FF7256;
+}
+
+.skill-item.familiar div label {
+  color: #FFA500;
+}
+
+.skill-item.master div label {
+  color: #3498DB;
+}
+
+.skill-group .skill-coord {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #cecece;
+  height: 13px;
+}
+
+.skill-coord li {
+  height: 12px;
+  border-left: 1px solid #cecece;
+  display: inline-block;
+}
+
+.skill-coord li:nth-child(1) {
+  float: left;
+}
+
+.skill-coord li:nth-child(2) {
+  margin-left: 30%;
+}
+
+.skill-coord li:nth-child(3) {
+  margin-left: 20%;
+}
+
+.skill-coord li:nth-child(4) {
+  margin-left: 20%;
+}
+
+.skill-coord li:nth-child(5) {
+  float: right;
+}
+
+.skill-group ul.skill-decript {
+  position: absolute;
+  display: none;
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  top: 0;
+  left: 0;
+}
+
+.skill-group ul.skill-decript.show {
+  display: inline-block;
+}
+
+.skill-group ul.skill-decript:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -10px;
+  border: 5px solid;
+  border-color: rgba(255, 255, 255, 0) #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+ul.skill-decript li {
+  font-size: 1em;
+  padding: 3px;
+  line-height: 1em;
+}
+
+ul.skill-decript li:before {
+  content: '';
+  height: 5px;
+  width: 5px;
+  border-radius: 2.5px;
+  background: #000;
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}

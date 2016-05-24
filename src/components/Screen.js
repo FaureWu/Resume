@@ -3,6 +3,7 @@ require('styles/Screen.css');
 import React from 'react';
 import Tool from './Tool';
 import Basic from './Basic';
+import Skill from './Skill';
 
 class Screen extends React.Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class Screen extends React.Component {
     let self = this;
     const skin = self.props.skin ? 'screen-' + self.props.skin : '';
     let component = {
-      'basic': <Basic></Basic>
+      'basic': <Basic data={this.props.component.data} active={this.props.active}></Basic>,
+      'skill': <Skill data={this.props.component.data} active={this.props.active}></Skill>
     };
     return (
       <div className={'screen '+ skin} ref="screen">
