@@ -27,7 +27,7 @@ class Skill extends React.Component {
         } else {
           clearInterval(self.timer);
         }
-      }, 16);
+      }, 32);
     }
   }
   drawSkill() {
@@ -35,7 +35,7 @@ class Skill extends React.Component {
     let seeHeight = document.documentElement.clientHeight;
     let top = skillGroup.getBoundingClientRect().top;
     let height = skillGroup.getBoundingClientRect().height;
-    if(top+height < seeHeight) this.open();
+    if(top >= 0 && top+height < seeHeight) this.open();
   }
   open() {
     let items = this.refs;
@@ -44,7 +44,7 @@ class Skill extends React.Component {
         let index = parseInt(k.split(this.itemPrefix)[1]);
         let percent = parseInt(this.data[index].percent);
         percent = percent ? percent : 0;
-        let step = percent/(1000/16);
+        let step = percent/(1000/32);
         let curr = 0;
         if(Tool.isIE6789()) {
           let timer = setInterval(function() {
@@ -54,7 +54,7 @@ class Skill extends React.Component {
               clearInterval(timer);
             }
             items[k].style.cssText = 'width:'+curr+'%';
-          }, 16);
+          }, 32);
         } else {
           items[k].style.cssText = 'width:'+percent+'%;transition: width 2s;-webkit-transition: width 2s;';
         }

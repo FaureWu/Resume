@@ -35,7 +35,7 @@ class Rotation extends React.Component {
     const time = 2;
     if(Tool.isIE6789()) {
       const oldY = Math.abs(parseFloat(rotationContent.style.top) ? parseFloat(rotationContent.style.top) : 0);
-      let step = (y-oldY)/(time/2*1000/16), tmp = oldY;
+      let step = (y-oldY)/(time/2*1000/32), tmp = oldY;
 
       this.timer = setInterval(function() {
         tmp += step;
@@ -45,7 +45,7 @@ class Rotation extends React.Component {
           self.timer = undefined;
         }
         rotationContent.style.cssText = 'top:-'+tmp+'px';
-      }, 16);
+      }, 32);
     } else {
       rotationContent.style.cssText = 'top:'+(y ? -y+'px' : '0')+';transition: top '+time+'s;-webkit-transition: top '+time+'s;';
     }

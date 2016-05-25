@@ -69,7 +69,7 @@
 .skill-item div label {
   position: absolute;
   line-height: 30px;
-  height: 100%;
+  height: 30px;
 }
 
 .skill-item.understand div label {

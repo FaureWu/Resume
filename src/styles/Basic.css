@@ -40,6 +40,7 @@
   background-position: center;
   border-radius: 75px;
   -webkit-border-radius: 75px;
+  border: 75px solid #1AB5FF;
 }
 
 .basic-container .basic-info {
@@ -57,10 +58,14 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0;
+  opacity: 0;
 }
 
-.basic-info p:first-child {
+.basic-info p:nth-child(1) {
   font-size: 2em;
+}
+
+.basic-info p:nth-child(2) {
 }
 
 .basic-info .basic-item {
@@ -73,6 +78,13 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0;
+  opacity: 0;
+}
+
+.basic-info .basic-item label {
+}
+
+.basic-info .basic-item span {
 }
 
 .basic-container .basic-decript {
