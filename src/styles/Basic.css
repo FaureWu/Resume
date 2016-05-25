@@ -5,6 +5,7 @@
 
 .basic {
   position: relative;
+  font-size: 1.2em;
 }
 
 .basic .basic-container {
@@ -34,7 +35,7 @@
 .basic-icon span {
   width: 150px;
   height: 150px;
-  background: url('../images/logo.jpg');
+  background: url('../images/me.png');
   background-size: 150px 150px;
   background-repeat: no-repeat;
   background-position: center;
@@ -44,7 +45,7 @@
 }
 
 .basic-container .basic-info {
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -62,7 +63,7 @@
 }
 
 .basic-info p:nth-child(1) {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .basic-info p:nth-child(2) {

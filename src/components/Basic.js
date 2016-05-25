@@ -9,6 +9,7 @@ class Basic extends React.Component {
     this.state = {
     };
     this.timer;
+    this.init = false;
     this.playPrefix = 'play-';
   }
   componentDidMount() {
@@ -43,10 +44,10 @@ class Basic extends React.Component {
               curr = 1;
               clearInterval(timer);
             }
-            items[k].style.cssText = 'opacity:'+curr;
+            items[k].style.cssText = 'opacity: '+curr;
           }, 32);
         } else {
-          items[k].style.cssText = 'opacity: 1;transition: all 2s;-webkit-transition: all 2s;';
+          items[k].style.cssText = 'opacity: 1;transition: opacity 2s;-webkit-transition: opacity 2s;';
         }
       }
     }
@@ -57,6 +58,8 @@ class Basic extends React.Component {
     } else {
       basicIcon.style.cssText = 'border-width: 0;transition: border-width 2s;-webkit-transition: border-width 2s;';
     }
+
+    this.init = true;
   }
   render() {
     let self = this;

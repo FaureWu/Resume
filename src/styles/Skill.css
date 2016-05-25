@@ -1,7 +1,7 @@
 .skill {
   position: relative;
-  height: 100%;
   padding: 10px;
+  font-size: 1.2em;
 }
 
 .skill .skill-container {
@@ -12,20 +12,19 @@
   padding-right: 10px;
   padding-top: 100px;
   padding-bottom: 100px;
-  height: 100%;
 }
 
 .skill-container .skill-title {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: center;
 }
 
 .skill-container .skill-group {
   position: relative;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -153,7 +152,7 @@
 }
 
 ul.skill-decript li {
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 3px;
   line-height: 1em;
 }

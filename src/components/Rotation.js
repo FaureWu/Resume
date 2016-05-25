@@ -21,7 +21,7 @@ class Rotation extends React.Component {
   }
   componentDidUpdate(oldProps, oldState) {
     //注意：该函数中不能直接或间接调用this.setState(),否则会无限递归
-    this.scroll();
+    // this.scroll();
   }
   scroll() {
     let self = this;

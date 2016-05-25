@@ -1,5 +1,6 @@
 /* Base Application Styles */
-body,html {
+body {
   font: normal 62.5% Helvetica, Arial, sans-serif;
   background: #1AB5FF;
+  -webkit-text-size-adjust: none;
 }

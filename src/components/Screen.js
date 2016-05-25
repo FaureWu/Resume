@@ -4,6 +4,7 @@ import React from 'react';
 import Tool from './Tool';
 import Basic from './Basic';
 import Skill from './Skill';
+import Career from './Career';
 
 class Screen extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class Screen extends React.Component {
     const skin = self.props.skin ? 'screen-' + self.props.skin : '';
     let component = {
       'basic': <Basic data={this.props.component.data}></Basic>,
-      'skill': <Skill data={this.props.component.data}></Skill>
+      'skill': <Skill data={this.props.component.data}></Skill>,
+      'career': <Career data={this.props.component.data}></Career>
     };
     return (
       <div className={'screen '+ skin}>

@@ -1,0 +1,87 @@
+.career {
+  position: relative;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.career .career-container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.career-container .career-title {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.career-container table.career-group {
+  position: relative;
+  display: table;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-left: 1px solid #EBEBEB;
+}
+
+table.career-group tr {
+  display: table-row;
+}
+
+table.career-group tr:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #EBEBEB;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: -9px;
+}
+
+table.career-group tr td {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px;
+}
+
+table.career-group tr .career-slogan {
+
+}
+
+.career-slogan .logo {
+  width: 100px;
+  height: 20px;
+  background-size: 100px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.career-slogan .logo-skspruce {
+  background: url('../images/skspruce.png');
+}
+
+.career-slogan .logo-sobey {
+  background: url('../images/sobey.png');
+}
+
+table.career-group tr .career-content {
+
+}
+
+.career-slogan label:nth-child(1) {
+
+}
+
+.career-slogan label:nth-child(2) {
+  font-size: 1.5em;
+  color: #3498DB;
+}
