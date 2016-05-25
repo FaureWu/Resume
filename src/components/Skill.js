@@ -65,20 +65,31 @@ class Skill extends React.Component {
       return 3;
     }
   }
-  mouseEnterHandler(index, event) {
-    let decript = this.refs.skillDecript;
-    console.log(event.target.offsetTop);
-    decript.style.cssText = 'top:'+(event.target.offsetTop)+'px;left: '+this.data[index].percent/2+'%;';
 
+  show(index, offset) {
+    let decript = this.refs.skillDecript;
+    decript.style.cssText = 'top:'+offset+'px;left: '+this.data[index].percent/2+'%;';
     this.setState({
       show: true,
       decript: this.data[index].decript
     });
   }
-  mouseLeaveHandler(event) {
+  hide() {
     this.setState({
       show: false
     });
+  }
+  mouseEnterHandler(index, event) {
+    this.show(index, event.target.offsetTop);
+  }
+  mouseLeaveHandler(event) {
+    this.hide();
+  }
+  touchStartHandler(index, event) {
+    this.show(index, event.targetTouches[0].target.offsetTop);
+  }
+  touchEndHandler(event) {
+    this.hide();
   }
   render() {
     let self = this;
@@ -108,6 +119,8 @@ class Skill extends React.Component {
                   <div ref={refName}
                     onMouseEnter={self.mouseEnterHandler.bind(self, index)}
                     onMouseLeave={self.mouseLeaveHandler.bind(self)}
+                    onTouchStart={self.touchStartHandler.bind(self, index)}
+                    onTouchEnd={self.touchEndHandler.bind(self)}
                   >
                     <label>{item.name}</label>
                   </div>
