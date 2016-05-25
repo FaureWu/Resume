@@ -1,27 +1,5 @@
 /* Base Application Styles */
-body {
-  color: #fff;
+body,html {
+  font: normal 62.5% Helvetica, Arial, sans-serif;
   background: #1AB5FF;
-  font-size: 62.5%;
-  font-family: "Microsoft YaHei",Microsoft JhengHei, Helvetica, STHeiti STXihei, Arial;
-}
-
-.app {
-  height: 100%;
-}
-
-.index img {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
-}
-
-.index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
 }

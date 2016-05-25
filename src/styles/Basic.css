@@ -1,28 +1,34 @@
 .basic * {
   box-sizing: border-box;
+  display: block;
 }
 
 .basic {
   position: relative;
-  height: 100%;
-  padding: 10px;
 }
 
-.basic .basic-content {
+.basic .basic-container {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding: 10px;
-  height: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
 }
 
-.basic-content .basic-icon {
-  position: relative;
-  display: block;
-  width: 150px;
-  height: 150px;
+.basic-container div {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.basic-container .basic-icon {
+  width: 170px;
+  height: 170px;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 
 .basic-icon span {
@@ -36,10 +42,7 @@
   -webkit-border-radius: 75px;
 }
 
-.basic-content .basic-info {
-  position: relative;
-  display: block;
-  vertical-align: top;
+.basic-container .basic-info {
   font-size: 1.5em;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -47,7 +50,7 @@
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
+  text-align: left;
 }
 
 .basic-info p {
@@ -57,7 +60,11 @@
 }
 
 .basic-info p:first-child {
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+.basic-info .basic-item {
+  display: block;
 }
 
 .basic-info .basic-item label,
@@ -68,28 +75,28 @@
   margin: 0;
 }
 
-.basic-content .basic-decript {
+.basic-container .basic-decript {
   position: relative;
   display: block;
 }
 
 @media (min-width: 1500px) {
-  .basic .basic-content {
+  .basic .basic-container {
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
-  .basic .basic-content {
+  .basic .basic-container {
   }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  .basic .basic-content {
+  .basic .basic-container {
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .basic .basic-content {
+  .basic .basic-container {
   }
 }
 

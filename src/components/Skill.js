@@ -15,17 +15,30 @@ class Skill extends React.Component {
     this.data = props.data;
     this.itemPrefix = 'item-';
     this.init = false;
+
+    this.timer;
   }
   componentDidMount() {
-
+    let self = this;
+    if(!this.timer) {
+      this.timer = setInterval(function() {
+        if(!self.init) {
+          self.drawSkill();
+        } else {
+          clearInterval(self.timer);
+        }
+      }, 16);
+    }
   }
   componentWillReceiveProps(nextProps) {
-    let self = this;
-    if(nextProps.active && !this.init) {
-      setTimeout(function() {
-        self.open();
-      }, 2000);
-    }
+
+  }
+  drawSkill() {
+    let skillGroup = this.refs.skillGroup;
+    let seeHeight = document.documentElement.clientHeight;
+    let top = skillGroup.getBoundingClientRect().top;
+    let height = skillGroup.getBoundingClientRect().height;
+    if(top+height < seeHeight) this.open();
   }
   open() {
     let items = this.refs;
@@ -39,6 +52,7 @@ class Skill extends React.Component {
         if(Tool.isIE6789()) {
           let timer = setInterval(function() {
             curr += step;
+            console.log(curr);
             if(curr >= percent) {
               curr = percent;
               clearInterval(timer);
@@ -107,9 +121,9 @@ class Skill extends React.Component {
     }
     return (
       <div className="skill">
-        <div className="skill-content">
+        <div className="skill-container">
           <p className="skill-title">学而不已，阖棺乃止</p>
-          <div className="skill-group">
+          <div className="skill-group" ref="skillGroup">
           {
             this.data.map(function(item, index) {
               let itemClass = 'skill-item ' + self.level[self.getLevel(item.percent)];

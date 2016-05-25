@@ -12,18 +12,17 @@ class Screen extends React.Component {
     };
   }
   componentDidMount() {
-    var screen = this.refs.screen;
-    screen.style.height = this.props.height+'px';
+
   }
   render() {
     let self = this;
     const skin = self.props.skin ? 'screen-' + self.props.skin : '';
     let component = {
-      'basic': <Basic data={this.props.component.data} active={this.props.active}></Basic>,
-      'skill': <Skill data={this.props.component.data} active={this.props.active}></Skill>
+      'basic': <Basic data={this.props.component.data}></Basic>,
+      'skill': <Skill data={this.props.component.data}></Skill>
     };
     return (
-      <div className={'screen '+ skin} ref="screen">
+      <div className={'screen '+ skin}>
         <div className="screen-container">
           {component[this.props.component.type]}
         </div>

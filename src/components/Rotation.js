@@ -158,37 +158,11 @@ class Rotation extends React.Component {
     let items = this.props.items;
     return (
       <div className="rotation">
-        <div className="rotation-content" ref="rotationContent"
-              onWheel={this.showScreenWheelHandler.bind(this)}
-              onTouchStart={this.showScreenTouchStartHandler.bind(this)}
-              onTouchMove={this.showScreenTouchMoveHandler.bind(this)}
-              onTouchEnd={this.showScreenTouchEndHandler.bind(this)}
-              onMouseDown={this.showScreenMouseDownHandler.bind(this)}
-              onMouseMove={this.showScreenMouseMoveHandler.bind(this)}
-              onMouseUp={this.showScreenMouseUpHandler.bind(this)}
-        >
-          <ul className="rotation-icon">
-            {
-              items.map(function(screen, index) {
-                let activeClass = Tool.classSet({
-                  active: index == self.state.currIndex
-                });
-                return (<li onClick={self.showScreenClickHandler.bind(self, index)}  className={activeClass} key={index}></li>);
-              })
-            }
-          </ul>
-          <div className="rotation-group">
-          {
-            items.map(function(screen, index) {
-              let active = false;
-              if(index == self.state.currIndex) {
-                active = true;
-              }
-              return (<Screen key={index} skin={screen.skin} height={self.height} component={screen.component} active={active}></Screen>);
-            })
-          }
-          </div>
-        </div>
+      {
+        items.map(function(screen, index) {
+          return (<Screen key={index} skin={screen.skin} height={self.height} component={screen.component}></Screen>);
+        })
+      }
       </div>
     );
   }

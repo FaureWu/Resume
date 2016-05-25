@@ -21,7 +21,7 @@ class Basic extends React.Component {
     ];
     return (
       <div className="basic">
-        <div className="basic-content">
+        <div className="basic-container">
           <div className="basic-icon">
             <span></span>
           </div>

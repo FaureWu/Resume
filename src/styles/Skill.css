@@ -4,24 +4,26 @@
   padding: 10px;
 }
 
-.skill .skill-content {
+.skill .skill-container {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   height: 100%;
 }
 
-.skill-content .skill-title {
-  height: 20px;
+.skill-container .skill-title {
   margin: 0;
-  width: 150px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.5em;
+  font-size: 2em;
+  text-align: center;
 }
 
-.skill-content .skill-group {
+.skill-container .skill-group {
   position: relative;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -29,7 +31,7 @@
 
 .skill-group .skill-item {
   width: 100%;
-  height: 60px;
+  height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -67,8 +69,8 @@
 
 .skill-item div label {
   position: absolute;
-  height: 40px;
-  line-height: 40px;
+  line-height: 30px;
+  height: 100%;
 }
 
 .skill-item.understand div label {
