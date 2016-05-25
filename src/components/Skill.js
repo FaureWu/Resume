@@ -30,9 +30,6 @@ class Skill extends React.Component {
       }, 16);
     }
   }
-  componentWillReceiveProps(nextProps) {
-
-  }
   drawSkill() {
     let skillGroup = this.refs.skillGroup;
     let seeHeight = document.documentElement.clientHeight;
@@ -52,7 +49,6 @@ class Skill extends React.Component {
         if(Tool.isIE6789()) {
           let timer = setInterval(function() {
             curr += step;
-            console.log(curr);
             if(curr >= percent) {
               curr = percent;
               clearInterval(timer);
@@ -79,7 +75,6 @@ class Skill extends React.Component {
       return 3;
     }
   }
-
   show(index, offset) {
     let decript = this.refs.skillDecript;
     decript.style.cssText = 'top:'+offset+'px;left: '+this.data[index].percent/2+'%;';
