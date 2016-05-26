@@ -56,6 +56,12 @@ let Tool = new class {
 
     return false;
   }
+  formateDate(timeString) {
+    let timestamp = new Date(timeString);
+    let year = timestamp.getFullYear();
+    let month = timestamp.getMonth()+1;
+    return year+'-'+(month < 10 ? '0'+month : month);
+  }
 }
 
 export default Tool;
