@@ -13,6 +13,7 @@
   padding-right: 10px;
   padding-top: 100px;
   padding-bottom: 100px;
+
 }
 
 .career-container .career-title {
@@ -33,6 +34,8 @@
   padding-bottom: 20px;
   border-left: 1px solid #EBEBEB;
   font-size: 1.2em;
+  opacity: 0;
+  margin-top: -50px;
 }
 
 table.career-group tr {
@@ -58,6 +61,10 @@ table.career-group tr td {
 
 table.career-group tr .career-slogan {
 
+}
+
+.career-content div label {
+  color: #73DBA5;
 }
 
 .career-slogan .logo {

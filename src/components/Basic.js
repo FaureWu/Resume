@@ -31,24 +31,20 @@ class Basic extends React.Component {
     if(top >= 0 && top < seeHeight/2) this.open();
   }
   open() {
-    let items = this.refs;
-    for(let k in items) {
-      if(k.indexOf(this.playPrefix) != -1) {
-        if(Tool.isIE6789()) {
-          let step = 1/(1000/32);
-          let curr = 0;
-          let timer = setInterval(function() {
-            curr += step;
-            if(curr >= 1) {
-              curr = 1;
-              clearInterval(timer);
-            }
-            items[k].style.cssText = 'opacity: '+curr;
-          }, 32);
-        } else {
-          items[k].style.cssText = 'opacity: 1;transition: opacity 2s;-webkit-transition: opacity 2s;';
+    let basicInfo = this.refs.basicInfo;
+    if(Tool.isIE6789()) {
+      let step = 1/(1000/32);
+      let curr = 0;
+      let timer = setInterval(function() {
+        curr += step;
+        if(curr >= 1) {
+          curr = 1;
+          clearInterval(timer);
         }
-      }
+        basicInfo.style.cssText = 'opacity: '+curr;
+      }, 32);
+    } else {
+      basicInfo.style.cssText = 'opacity: 1;transition: opacity 2s;-webkit-transition: opacity 2s;';
     }
 
     let basicIcon = this.refs.basicIcon;
@@ -77,14 +73,14 @@ class Basic extends React.Component {
             <span ref="basicIcon"></span>
           </div>
           <div className="basic-info" ref="basicInfo">
-            <p ref={this.playPrefix+'name'}>{data.name}</p>
-            <p ref={this.playPrefix+'job'}>{data.job}</p>
+            <p>{data.name}</p>
+            <p>{data.job}</p>
             {
               items.map(function(item, index) {
                 return (
                   <div key={index} className="basic-item">
-                    <label ref={self.playPrefix+'label-'+index}>{item.title}</label>
-                    <span ref={self.playPrefix+'span-'+index}>{item.value}</span>
+                    <label>{item.title}</label>
+                    <span>{item.value}</span>
                   </div>
                 );
               })
