@@ -24,7 +24,8 @@ class Career extends React.Component {
                   <span className="logo logo-skspruce"></span>
                 </td>
                 <td className="career-content">
-                  web前端工程师
+                  <label>web研发工程师</label>
+                  <p></p>
                 </td>
               </tr>
               <tr>

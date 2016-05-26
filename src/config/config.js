@@ -33,44 +33,69 @@ let config = {
               name: 'HTML/CSS',
               percent: 65,
               decript: [
-                '熟练掌握响应式布局',
-                '熟悉网页特效制作',
-                'dfdsfdsddsfdsdf'
+                '熟悉HTML、CSS，熟练掌握页面架构及布局，理解WEB相关标准及标签语义化，能够独立完成页面代码的编写',
+                '掌握HTML5/CSS3新特性，能运用于新浏览器中展现效果更佳',
+                '具备独立调试出兼容主流浏览器的页面的能力，具备chrome开发者工具，firebug等调试辅助工具使用'
               ]
             },
             {
               name: 'JS',
               percent: 80,
               decript: [
-                ''
+                '具备熟练使用原生JS编写页面的交互能力',
+                '熟悉JS原型链继承方式，闭包的使用',
+                '曾利用原生JS独立编写表格插件，增删改查，排序，筛选等功能'
               ]
             },
             {
               name: 'JQuery',
               percent: 50,
               decript: [
-                ''
+                '熟悉JQuery选择器，ajax请求',
+                '熟悉JQuery extend插件编写'
               ]
             },
             {
               name: 'Reactjs',
               percent: 40,
               decript: [
-                ''
+                '掌握React框架的使用，能独立编写在此框架上的网页应用',
+                '掌握JSX的使用，掌握git，grunt，webpack，yeoman等前端自动化工具',
+                '了解React生命周期，虚拟DOM等'
               ]
             },
             {
               name: 'Angularjs/Nodejs',
               percent: 25,
               decript: [
-                ''
+                '了解Angularjs、Nodejs基本使用方式，曾独立编写过学习demo',
+                '了解express，jade模板，less基本使用方式'
+              ]
+            },
+            {
+              name: 'DHTMLX/echart/jtopo/bootstrap',
+              percent: 45,
+              decript: [
+                '熟悉DHTMLX grid，tree，chart等相关组件的使用，能快速建立页面',
+                '掌握jtopo，可编写基于此插件的网络topo图',
+                '了解echart、bootstrap，可应用于项目实际生产中使用'
+              ]
+            },
+            {
+              name: 'LAMP(Linux+Apache+Mysql+PHP)',
+              percent: 35,
+              decript: [
+                '掌握PHP语法，具备独立编写能力，具备实际项目经验',
+                '掌握yii/yii2框架的使用，具备实际项目经验',
+                '掌握Mysql数据库，增删改查，mysql数据库配置，数据分区，数据库维护，具备实际项目经验',
+                '掌握linux shell脚本的编写，服务器日常安装，维护，能熟练使用linux大多数命令'
               ]
             }
           ]
         }
       },
       {
-        skin: 'yellow',
+        skin: 'pink',
         component: {
           type: 'career',
           data: [
@@ -85,7 +110,7 @@ let config = {
         }
       },
       {
-        skin: 'pink',
+        skin: 'yellow',
         component: {
           type: ''
         }

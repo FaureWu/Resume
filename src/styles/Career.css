@@ -2,6 +2,7 @@
   position: relative;
   padding: 10px;
   font-size: 1.2em;
+  color: #fff;
 }
 
 .career .career-container {
@@ -42,10 +43,11 @@ table.career-group tr:before {
   content: '';
   width: 10px;
   height: 10px;
-  background: #EBEBEB;
+  background: #83C2EA;
   display: inline-block;
   border-radius: 5px;
-  margin-left: -9px;
+  margin-left: -10px;
+  border: 1px solid #EBEBEB;
 }
 
 table.career-group tr td {
@@ -83,6 +85,6 @@ table.career-group tr .career-content {
 }
 
 .career-slogan label:nth-child(2) {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #3498DB;
 }

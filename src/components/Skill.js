@@ -102,9 +102,6 @@ class Skill extends React.Component {
   }
   render() {
     let self = this;
-    this.data.sort(function(a, b) {
-      return b.percent-a.percent;
-    });
     let decriptClass = Tool.classSet({
       'skill-decript': true,
       'show': this.state.show
