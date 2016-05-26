@@ -1,6 +1,6 @@
 /* Base Application Styles */
 body {
   font: normal 62.5% Helvetica, Arial, sans-serif;
+  font-family: Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
   background: #1AB5FF;
-  -webkit-text-size-adjust: none;
 }

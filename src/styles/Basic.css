@@ -67,6 +67,7 @@
 }
 
 .basic-info p:nth-child(2) {
+  font-size: 1.5em
 }
 
 .basic-info .basic-item {
