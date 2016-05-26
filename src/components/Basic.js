@@ -28,8 +28,7 @@ class Basic extends React.Component {
     let basicInfo = this.refs.basicInfo;
     let seeHeight = document.documentElement.clientHeight;
     let top = basicInfo.getBoundingClientRect().top;
-    let height = basicInfo.getBoundingClientRect().height;
-    if(top >= 0 && top+height < seeHeight) this.open();
+    if(top >= 0 && top < seeHeight/2) this.open();
   }
   open() {
     let items = this.refs;

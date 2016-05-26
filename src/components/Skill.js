@@ -34,8 +34,7 @@ class Skill extends React.Component {
     let skillGroup = this.refs.skillGroup;
     let seeHeight = document.documentElement.clientHeight;
     let top = skillGroup.getBoundingClientRect().top;
-    let height = skillGroup.getBoundingClientRect().height;
-    if(top >= 0 && top+height < seeHeight) this.open();
+    if(top >= 0 && top < seeHeight/2) this.open();
   }
   open() {
     let items = this.refs;
