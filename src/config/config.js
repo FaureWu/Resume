@@ -121,7 +121,10 @@ let config = {
       {
         skin: 'green',
         component: {
-          type: ''
+          type: 'demo',
+          data: [
+
+          ]
         }
       },
       {

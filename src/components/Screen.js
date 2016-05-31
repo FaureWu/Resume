@@ -5,6 +5,7 @@ import Tool from './Tool';
 import Basic from './Basic';
 import Skill from './Skill';
 import Career from './Career';
+import Demo from './Demo';
 
 class Screen extends React.Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class Screen extends React.Component {
     let component = {
       'basic': <Basic data={this.props.component.data}></Basic>,
       'skill': <Skill data={this.props.component.data}></Skill>,
-      'career': <Career data={this.props.component.data}></Career>
+      'career': <Career data={this.props.component.data}></Career>,
+      'demo': <Demo data={this.props.component.data}></Demo>
     };
     return (
       <div className={'screen '+ skin}>

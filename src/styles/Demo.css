@@ -1,0 +1,51 @@
+.demo {
+  position: relative;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.demo .demo-container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.demo-container .demo-title {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.demo-container .demo-group {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.demo-group .demo-item {
+
+}
+
+.demo-item span {
+  width: 80px;
+  height: 80px;
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url('../images/gobang.png');
+}
+
+.demo-item label {
+
+}

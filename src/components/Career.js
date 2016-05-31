@@ -64,7 +64,7 @@ class Career extends React.Component {
     return (
       <div className="career">
         <div className="career-container">
-          <p className="career-title">实践是检验真理的唯一标准</p>
+          <p className="career-title">生如夏花之绚烂，死如秋叶之静美</p>
           <table className="career-group" ref="careerGroup">
             <tbody>
             {
